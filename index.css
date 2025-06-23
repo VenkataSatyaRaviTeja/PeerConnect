@@ -1,0 +1,97 @@
+:root {
+  --primary: rgb(220, 84, 0);
+  --shadow: rgba(0, 0, 0, 0.345);
+  --text-primary: black;
+  --text-secondary: white;
+  --disabled: gray;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: Roboto;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#appHeader {
+  background-color: var(--primary);
+  padding: 1rem;
+  color: var(--text-secondary);
+  box-shadow: 0px 0px 10px 5px var(--shadow);
+}
+
+#loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+#connectForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0px 0px 5px 0px var(--shadow);
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 0.5rem;
+  width: 220px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid var(--primary);
+}
+
+input:focus {
+  outline: 1px solid var(--primary);
+  box-shadow: 0px 0px 4px var(--primary);
+}
+
+button {
+  background-color: transparent;
+  padding: 0.5rem;
+  width: 240px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid var(--primary);
+  margin: 0.5rem;
+  position: relative;
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  cursor: pointer;
+  pointer-events: auto;
+  color: var(--primary);
+}
+
+button:hover {
+  background-color: var(--primary);
+  color: var(--text-secondary);
+  transform: scale(1.1);
+}
+
+button:disabled {
+  border: 2px solid var(--disabled);
+  color: var(--disabled);
+  pointer-events: none;
+}
+
+sup {
+  color: red;
+}
