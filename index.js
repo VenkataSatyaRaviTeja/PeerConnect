@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   validateConnectForm();
   let connectForm = document.getElementById("connectForm");
   connectForm.addEventListener("submit", connectToRoom);
+  document.getElementById("messageContainer").style.display = "none";
+  this.connectToRoom({});
 });
 
 function validateConnectForm() {
@@ -14,4 +16,6 @@ function validateConnectForm() {
 
 function connectToRoom(e) {
   e.preventDefault();
+  document.getElementById("loginContainer").style.display = "none";
+  document.getElementById("messageContainer").style.display = "flex";
 }
